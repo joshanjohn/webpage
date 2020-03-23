@@ -1,0 +1,66 @@
+Creating a project
+-------------------
+1. Create a mysite directory in your current directory.
+
+	type:
+	    >django-admin startproject mysite
+
+2.Run the sever locally.
+	type:
+	    >python manage.py runserver
+			or
+	    >python manage.py runserver 8080
+
+3.Creating the Polls app
+
+	To create your app, make sure you’re in the same directory as manage.py
+	type:
+	    >python manage.py startapp polls
+
+4. Open the file polls/views.py and put the following Python code in it:
+
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
+
+		
+
+
+5. In the polls/urls.py file include the following code:
+
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+
+
+
+6.The next step is to point the root URLconf at the polls.urls module.
+INCLUDE FOLLOWING CODES IN mysite/urls.py
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
+
+
+
+7. Run the sever locally.
+	type:
+	    >python manage.py runserver
+
+
+
+
+   CONGRATULATIONS!
+=====================
+
+ check that you’re going to http://localhost:8000/polls/
