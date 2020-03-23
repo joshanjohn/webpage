@@ -1,0 +1,75 @@
+DJANGO INSTALLATION 
+-----------------------
+
+
+
+Installation instruction and creating the django project:
+
+1.Install python.
+
+	a) https://www.pyhton.org/downloads/ and click yellow button
+	b) install the python installer
+
+2. Install python package repository(PyPi) the pip tool(only for the first time).
+       ------------
+       |go to cmd |
+       ----------- 
+		type:
+		     >cd\
+		     >python -m pip -U pip
+
+
+3. Install the python Virtual Environment (only for first time0 ).
+		type:
+		    >pip install virtualenv
+
+
+4. Creat and enter a root directory for all ypur projects.
+		type:
+		     >md myprojects
+		     >cd myprojects
+
+
+5. Install django by following commands.
+		
+		type:
+		    >pip install django 
+
+6. Creat a viryual environment (only for first time)
+
+		type:
+		    >virtualenv django
+
+7. Creat your django projrect.
+		type:
+		    >django-admin startproject testproject 
+					      (project name)
+
+8. Run the sever locally.	
+
+		type:
+		    >cd testproject
+			(project name)
+		    >python manage.py runserver
+						 #Every time you run the Django 
+						 you have to run the server by 
+						 typing the command 
+
+  Congragulations!
+<==================>  Your successfully created your web page
+
+
+--> Open Chrome and type the following to see it !
+
+		type:
+		      https://127.0.0.1.8000/
+
+ 
+
+
+
+
+
+	
+
+		    
