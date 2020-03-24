@@ -1,0 +1,54 @@
+  CREATING AN ADMIN USER 
+ ========================
+
+1. First we’ll need to create a user who can login to the admin site. 
+      
+		type:
+		    >python manage.py createsuperuser
+2. Enter your desired username and press enter.
+
+		
+		    Username: admin
+
+3. You will then be prompted for your desired email address
+
+		
+		     Email address: admin@example.com
+
+4. Enter your password.
+		     
+		      
+		     Password: **********
+		     Password (again): *********
+		     Superuser created successfully.
+
+  START THE DEVELOPMENT SERVER
+ ===============================
+
+The Django admin site is activated by default. Let’s start the development server and explore it.
+
+If the server is not running start it like so:
+
+		type:
+		     >python manage.py runserver
+
+	# open a Web browser and go to “/admin/” on your local domain 
+	    e.g., http://127.0.0.1:8000/admin/.
+
+  MAKETHE POLL APP MODIFIABLE IN TEH ADMIN
+============================================
+But where’s our poll app? It’s not displayed on the admin index page.
+
+Only one more thing to do: we need to tell the admin that Question objects have an admin interface. 
+To do this, open the polls/admin.py file, and edit it to look like this:
+
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+
+
+
+
+		
